@@ -103,7 +103,6 @@ bool SortedSet::search(TComp elem) const {
         current = next[current];
     }
     return false;
-    return true;
 }
 
 // Komplexitat: Theta(n)
