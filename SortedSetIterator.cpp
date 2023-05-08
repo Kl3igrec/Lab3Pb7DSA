@@ -30,19 +30,17 @@ void SortedSetIterator::next() {
 TElem SortedSetIterator::getCurrent()
 {
     //TODO - Implementation
-    if (!valid())
+    if (valid())
     {
         return multime.elems[currentelem];
     }else
         throw exception();
 
-    return NULL_TELEM;
 }
 
 bool SortedSetIterator::valid() const {
     //TODO - Implementation
     //return currentelem != -1 && currentelem != multime.firstEmpty;
     return currentelem >= 0 && currentelem < multime.cap && currentelem != -1 && currentelem != multime.firstEmpty;
-    return false;
 }
 
